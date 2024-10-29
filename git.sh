@@ -10,7 +10,7 @@ fi
 
 #git remote add -f gsp_demo_java111 https://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@github.com/baijunyu/gsplparser.git
 
-git clone -b main https://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@github.com/baijunyu/gsplparser.git
+git clone -b main https://github.com/baijunyu/gsplparser.git
 
 echo 'success'
 
