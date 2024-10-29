@@ -8,7 +8,9 @@ if [ -n "$(git status --porcelain)" ]; then
   git stash save "Uncommitted changes before switching branches"
 fi
 
-git remote add -f gsp_demo_java111 https://github.com/baijunyu/gsplparser.git
+#git remote add -f gsp_demo_java111 https://github.com/baijunyu/gsplparser.git
+
+git clone https://github.com/baijunyu/gsplparser.git
 
 echo 'success'
 
