@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+#     - name: cancel running workflows
+#       uses: everphone-gmbh/cancel-previous-workflows@v5
+      
+    - name: Setup Java JDK
+      uses: actions/setup-java@v1.4.3
+      with:
+        java-version: 11
+
+    - name: Setup timezone
+      uses: zcong1993/setup-timezone@master
+      with:
+        timezone: Asia/Shanghai
+
+    - name: chmod
+      run: sudo chmod +x ./git.sh
+      
+    - name: run
+      run: ./git.sh
